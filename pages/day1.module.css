@@ -17,14 +17,21 @@
   background-color: lightgrey;
   margin-bottom: 20px;
   padding: 0.4rem;
+  text-align: center;
 }
 
 .column {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vh;
 }
 
 .row {
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .box {

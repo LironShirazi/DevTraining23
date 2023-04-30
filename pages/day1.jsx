@@ -5,7 +5,7 @@ export default function Day1() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Fix the Website Challenge</h1>
+        <h1>Fix the Website Challenge - Liron</h1>
       </header>
       <main className={styles.main}>
         <section className={styles.section}>
