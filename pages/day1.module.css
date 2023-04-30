@@ -7,6 +7,7 @@
   background-color: lightblue;
   padding: 10px;
   font-size: 1rem;
+  text-align: center;
 }
 
 .main {
@@ -15,8 +16,8 @@
 
 .section {
   background-color: lightgrey;
-  margin-bottom: 20px;
-  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+  padding: 0.2rem;
   text-align: center;
 }
 
@@ -26,46 +27,61 @@
   align-items: center;
   max-height: 100vh;
   /* flex-wrap: wrap; */
-  overflow-y: scroll;
+  overflow-y: auto;
+  font-size: 20px;
+
 }
 
 .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-size: 20px;
 }
 
 .box {
   background-color: tomato;
   color: white;
-  padding: 10px;
-  margin: 10px;
-  font-size: 0.8rem;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  line-height: 130px;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 0.9em;
+  width: 7.5em;
+  height: 7.5em;
+  /* text-align: center; */
+  /* line-height: 6.5em; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  box-shadow: 0 2px 5px 0 rgba(199, 32, 32, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: white;
+  color: tomato;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
 }
 
  @media screen and (max-width: 200px) {
   .box {
-    height: 100px;
-    width: 100px;
+    height: 5em;
+    width: 5em;
     font-size: 0.5rem;
-    padding: 5px;
-    margin: 5px;
-    line-height: 100px;
+    padding: 0.25em;
+    margin: 0.25em;
+    line-height: 5em;
   }
+
 }
 
 @media screen and (max-width: 150px) {
   .box {
-    height: 50px;
-    width: 50px;
+    height: 2.5em;
+    width: 2.5em;
     font-size: 0.5rem;
-    padding: 5px;
-    margin: 5px;
-    line-height: 50px;
+    padding: 0.5em;
+    margin: 0.5em;
+    line-height: 2.5em;
 
   } 
 } 
@@ -75,12 +91,24 @@
   .column {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    font-size: 20px;
   }
 }
 
 @media screen and (min-width: 600px) {
   .column {
     flex-direction: row;
+    justify-content: center;
   }
 }
+
+/* Mobile Phone */
+@media screen and (max-width: 576px) {
+  .box {
+    background-color: rgb(51, 51, 205);
+
+  }
+}
+
 
