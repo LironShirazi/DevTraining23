@@ -1,0 +1,52 @@
+.navbarContainer {
+  width: 100%;
+  background-color: darksalmon;
+  height: 70px;
+}
+
+.ulContainer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.linkContainer {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.linkStyle {
+  text-decoration: none;
+  font-weight: 800;
+  color: darkolivegreen;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  max-width: 15%;
+}
+
+.linkStyle:hover {
+  background-color: rgb(197, 225, 148) ;
+}
+
+.imageContainer {
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+
+.heroContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+
+
+}
+
+.contentOfSection {
+  font-size: 30px;
+}
