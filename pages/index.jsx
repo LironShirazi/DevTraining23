@@ -5,7 +5,7 @@ import TableOfContent from '../components/TableOfContent';
 export default function Index() {
   const days = [
     'Day 1 - Responsive design and Flexbox',
-    // 'Day 2: Introduction to React.js, State Management, and Hooks',
+    'Day 2: Introduction to React.js, State Management, and Hooks',
   ];
   return (
     <div className={styles.container}>

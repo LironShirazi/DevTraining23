@@ -1,13 +1,12 @@
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
 .header {
   background-color: lightblue;
   padding: 10px;
-  font-size: 1rem;
-  text-align: center;
+  font-size: 1.5rem;
 }
 
 .main {
@@ -42,78 +41,13 @@
 .box {
   background-color: tomato;
   color: white;
-  padding: 0.5em;
-  margin: 0.5em;
-  font-size: 0.9em;
-  width: 7.5em;
-  height: 7.5em;
-  /* text-align: center; */
-  /* line-height: 6.5em; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.box:hover {
-  box-shadow: 0 2px 5px 0 rgba(199, 32, 32, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  background-color: white;
-  color: tomato;
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.05);
-}
-
- @media screen and (max-width: 200px) {
-  .box {
-    height: 5em;
-    width: 5em;
-    font-size: 0.5rem;
-    padding: 0.25em;
-    margin: 0.25em;
-    line-height: 5em;
-  }
-
-}
-
-@media screen and (max-width: 150px) {
-  .box {
-    height: 2.5em;
-    width: 2.5em;
-    font-size: 0.5rem;
-    padding: 0.5em;
-    margin: 0.5em;
-    line-height: 2.5em;
-
-  } 
-} 
-
-
-@media screen and (min-width: 300px) {
-  .column {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .column {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-/* Mobile Phone */
-@media screen and (max-width: 576px) {
-  .box {
-    background-color: rgb(51, 51, 205);
-  }
-}
-
-@media screen and (max-width: 768px) and (orientation: landscape) { 
-  .box {
-    background-color: greenyellow;
-  } 
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2rem;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 130px;
 }
 
 @media screen and (max-width: 992px) { 
