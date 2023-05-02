@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import Popup from '../components/Popup';
 import styles from './day2.module.css';
+import useTasks from './useTasks';
 
 function TaskList() {
-  const [tasks, setTasks] = useState([
-    { id: 1, title: 'Learn React' },
-    { id: 2, title: 'Learn Next.js' },
-  ]);
+  // const [tasks, setTasks] = useState([
+  //   { id: 1, title: 'Learn React' },
+  //   { id: 2, title: 'Learn Next.js' },
+  // ]);
   const [showPopup, setShowPopup] = useState(false);
+  const [tasks, currentTask, currentTaskValueHandler,
+    addTaskHandler, removeTaskHandler, updateIsTaskDone] = useTasks(
+    [{ id: 1, title: 'Learn React', isDone: true },
+      { id: 2, title: 'Learn Next.js', isDone: false }],
+  );
 
   const openPopup = () => {
     setShowPopup(true);
@@ -15,10 +21,6 @@ function TaskList() {
 
   const closePopup = () => {
     setShowPopup(false);
-  };
-
-  const addTask = () => {
-    setTasks([...tasks, { id: tasks.length + 1, title: `Task ${tasks.length + 1}` }]);
   };
 
   const instructionsText = `
@@ -48,10 +50,18 @@ function TaskList() {
       )}
       <ul className={styles.list}>
         {tasks.map((task) => (
-          <li key={task.id} className={styles.listItem}>{task.title}</li>
+          <li key={task.id} className={`${styles.listItem} ${task.isDone ? styles.doneTask : ''}`}>
+            <input type="checkbox" defaultChecked={task.isDone} onClick={() => updateIsTaskDone(task.id)} />
+            <span className={styles.titleTaskStyle}>{task.title}</span>
+            <button type="button" className={styles.removeButton} onClick={() => removeTaskHandler(task.id)}>Delete Task</button>
+          </li>
         ))}
       </ul>
-      <button type="button" className={styles.addButton} onClick={addTask}>Add Task</button>
+      <div>
+        <span>Task Description:</span>
+        <input type="text" name="task" className={styles.inputStyles} value={currentTask} onChange={(e) => currentTaskValueHandler(e.currentTarget.value)} />
+        <button type="button" className={styles.addButton} onClick={() => addTaskHandler(currentTask)}>Add Task</button>
+      </div>
     </div>
   );
 }

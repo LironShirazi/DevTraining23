@@ -50,3 +50,22 @@
   background-color: #0056b3;
   border-color: #0056b3;
 }
+
+.inputStyles {
+  margin: 10px;
+}
+
+.removeButton {
+  margin: 10px;
+  color: white;
+  border-radius: 10px;
+  background-color: tomato;
+}
+
+.titleTaskStyle {
+  margin: 0 10px;
+}
+
+.doneTask {
+  text-decoration: line-through;
+}

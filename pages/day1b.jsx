@@ -19,7 +19,9 @@ export default function Day1b() {
           <Image fill src="/2.jpg" alt="hero image" />
         </div>
         <p className={styles.contentOfSection}>
-           Welcome to Heros developer - ready for any challenge</p>
+          Welcome to Heros developer - ready for any challenge
+
+        </p>
       </div>
     </div>
   );
